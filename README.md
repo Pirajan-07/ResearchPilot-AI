@@ -141,11 +141,11 @@ npm run dev
 The application will be accessible at `http://localhost:3000`.
 
 ## 15. API Overview
-- `POST /api/v1/documents/upload`: Upload and ingest a PDF document.
-- `GET /api/v1/documents/{document_id}`: Retrieve document processing status.
-- `POST /api/v1/qa/ask`: Submit a query and retrieve a grounded answer with citations.
-- `POST /api/v1/qa/summary`: Generate a 9-dimension structured summary.
-- `POST /api/v1/qa/insights`: Generate 7-dimension deep paper insights.
+- `POST /api/documents/`: Upload and ingest a PDF document.
+- `GET /api/documents/{document_id}`: Retrieve document processing status.
+- `POST /api/documents/{document_id}/query`: Submit a query and retrieve a grounded answer with citations.
+- `GET /api/documents/{document_id}/summary`: Generate a 9-dimension structured summary.
+- `GET /api/documents/{document_id}/insights`: Generate 7-dimension deep paper insights.
 
 ## 16. Testing & Validation
 The project includes a robust test suite to guarantee reliability.
