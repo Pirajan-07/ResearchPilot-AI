@@ -1,0 +1,44 @@
+# ============================================================
+# ResearchPilot AI — Backend Requirements
+# Python 3.11.9
+# ============================================================
+# Installation order matters:
+#   1. Install PyTorch CPU first (see README setup instructions)
+#   2. Then: pip install -r requirements.txt
+# ============================================================
+
+# --- API Framework ---
+fastapi>=0.115.0,<0.116.0
+uvicorn[standard]>=0.32.0,<0.33.0
+python-multipart>=0.0.9
+aiofiles>=24.0.0
+
+# --- Configuration ---
+pydantic>=2.0.0,<3.0.0
+pydantic-settings>=2.0.0,<3.0.0
+python-dotenv>=1.0.0
+
+# --- PDF Extraction ---
+pymupdf>=1.28.0,<1.29.0
+
+# --- LangChain Core ---
+# Using LangChain 1.x ecosystem (langchain-core>=1.x) for full compatibility with
+# langchain-google-genai 4.4.0 and langchain-huggingface 1.x
+langchain>=1.0.0,<2.0.0
+langchain-text-splitters>=0.3.0
+
+# --- LLM: Google Gemini ---
+langchain-google-genai>=4.4.0,<5.0.0
+
+# --- Embeddings: Local HuggingFace ---
+langchain-huggingface>=1.0.0,<2.0.0
+# sentence-transformers requires torch — install torch CPU separately first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers>=6.0.0,<7.0.0
+
+# --- Vector Store: ChromaDB ---
+langchain-chroma>=0.2.0
+chromadb>=1.5.0,<2.0.0
+
+# --- Logging ---
+loguru>=0.7.0

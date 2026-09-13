@@ -1,0 +1,1 @@
+"""ResearchPilot AI — services package"""

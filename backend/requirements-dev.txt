@@ -1,0 +1,7 @@
+# ResearchPilot AI — Development Dependencies
+# These are NOT needed at runtime — only for local testing.
+# Install with: pip install -r requirements-dev.txt
+
+pytest>=8.0.0,<9.0.0
+pytest-asyncio>=0.24.0,<1.0.0
+httpx>=0.28.0           # required by FastAPI TestClient

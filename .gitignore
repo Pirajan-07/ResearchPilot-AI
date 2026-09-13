@@ -1,0 +1,78 @@
+# ================================================================
+# ResearchPilot AI — .gitignore
+# ================================================================
+
+# === Python ===
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# === Environment / Secrets ===
+# Real .env files are NEVER committed. Only .env.example is committed.
+.env
+.env.local
+!.env.example
+!.env.local.example
+!backend/.env.example
+!frontend/.env.local.example
+
+# === Backend Runtime Storage ===
+# ChromaDB vector data (generated at runtime from uploaded documents)
+backend/storage/
+storage/
+
+# Uploaded PDFs (user-uploaded research documents — runtime data, not source code)
+*.pdf
+
+# Langflow isolated virtual environment (large, not application code)
+backend/.langflow_venv/
+
+# Langflow local SQLite database (runtime state)
+langflow.db
+*.db
+
+# === Temporary/Debug test scripts (not part of the application) ===
+upload_test.py
+backend/test_llm.py
+backend/test_retrieval.py
+backend/extract_flow.py
+
+# === Node / Frontend ===
+node_modules/
+.next/
+out/
+frontend/.next/
+frontend/out/
+frontend/node_modules/
+
+# === IDEs & Editors ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*.code-workspace
+
+# === OS-specific ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Logs ===
+*.log
+logs/
+
+# === HuggingFace model cache (lives outside the repo at ~/.cache/huggingface/) ===
+# Listed here for documentation — models are NOT committed to source control.
+
+# === Test artifacts ===
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
